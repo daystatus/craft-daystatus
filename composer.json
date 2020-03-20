@@ -1,0 +1,43 @@
+{
+    "name": "daystatus/daystatus",
+    "description": "Craft version health check for daystatus.io",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "daystatus"
+    ],
+    "support": {
+        "docs": "https://github.com/daystatus/daystatus/blob/master/README.md",
+        "issues": "https://github.com/daystatus/daystatus/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aphichat Panjamanee",
+            "homepage": "https://github.com/daystatus"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "daystatus\\daystatus\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "daystatus",
+        "handle": "daystatus",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/daystatus/daystatus/master/CHANGELOG.md",
+        "components": {
+            "daystatusService": "daystatus\\daystatus\\services\\DaystatusService"
+        },
+        "class": "daystatus\\daystatus\\Daystatus"
+    }
+}
