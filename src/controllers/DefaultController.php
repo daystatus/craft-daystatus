@@ -69,8 +69,8 @@ class DefaultController extends Controller
         header('Cache-Control: no-cache, must-revalidate, max-age=0');
 
         $token = \daystatus\daystatus\Daystatus::getInstance()->getSettings()->someAttribute;
-        
-        if ($_SERVER['QUERY_STRING'] !== $token)
+
+        if (Craft::$app->getRequest()->getQueryParam('t') !== $token)
         {
             exit;
         }
