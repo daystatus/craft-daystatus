@@ -48,8 +48,21 @@ class DefaultController extends Controller
      */
     protected $allowAnonymous = ['connect'];
 
+    // show the CMS version even if the system is offline?
+    protected $showWhenSystemIsOffline = true;
+
     // Public Methods
     // =========================================================================
+
+    function __construct()
+    {
+        if(Craft::$app->config->general->isSystemLive == false && 
+            $this->showWhenSystemIsOffline == true)
+        {
+            echo $this->actionConnect();
+            exit;
+        }
+    }
 
     /**
      * Handle a request going to our plugin's index action URL,

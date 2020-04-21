@@ -2,7 +2,7 @@
     "name": "daystatus/daystatus",
     "description": "Craft version health check for daystatus.io",
     "type": "craft-plugin",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "keywords": [
         "craft",
         "cms",
